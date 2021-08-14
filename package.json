@@ -4,7 +4,7 @@
   "description": "trabajar con asicronismo en Javascript",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "request": "node src/api-request/rickyrequest.js"
   },
   "keywords": [
     "callback",
@@ -12,5 +12,8 @@
     "async"
   ],
   "author": "becamilo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
 }
