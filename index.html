@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="https://kit.fontawesome.com/b7e713bb32.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/modal/modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Ricky and morty</title>
 </head>
 <body>
@@ -30,14 +32,35 @@
     <main class="main">
         <div class="main__item">
             <h2 class="main__item--title"> Javascript Asincronismo</h2>
-            <p class="main__item--description">La página es un beta. En esta página podrá encontrar la información de los personajes de la serie Rick and Morty. El propósito de este proyecto fue utilizar lo aprendido en la clase Asincronismo en Javascript. El cual se hace petición a la página oficial de Rick and Morty.</p>
+            <p class="main__item--description">En esta página podrá encontrar la información de los personajes de la serie Rick and Morty. El propósito de este proyecto fue utilizar lo aprendido en la clase Asincronismo en Javascript. El cual se hace petición a la página oficial de Rick and Morty.</p>
         </div>
         <div class="picture">
             <figure>  <img class="picture__img" src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG24.png" alt="Rick and morty"></figure>
         </div>   
         <div class="search">
-            <h2 class="search__title">BUSCA TU PERSONAJE</h2>
-            <input class="search__character"type="number" placeholder="Introduce el numero del personaje">
+            <label for="ricky"class="search__title">BUSCA TU PERSONAJE</label>
+            <input id="ricky"class="search__character"type="number" placeholder="Introduce el numero del personaje">
+            <button class="search__buton" id="abrir">BUSCAR</button>
+        </div>
+        <div id="miModal"class="modal">
+
+            
+            <div id="flex" class="modal__bottom">
+                <div class="contenido-modal">
+                    <div class="modal-header modal__bottom">
+                        <h2>Ricky and morty</h2>
+                        <span id="clouse"class="clouse">&times;</span>
+                        <lu class="modal__category">
+                            <figure> <img id="picture" class="picture__character"></figure>
+                            <li id="id" class="modal__category-li"></li>
+                            <li id="name" class="modal__category-li"></li>
+                            <li id="status" class="modal__category-li"></li>
+                            <li id="specie" class="modal__category-li"></li>
+                            <li id="gender" class="modal__category-li"></li>
+                        </lu>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -56,5 +79,7 @@
 </body>
 
 <script src="./src/menu.js"></script>
-<script src="./src/api-request/rickyrequest.js"></script>
+<script src="./src/Peticiones/api.js"></script>
+<script src="./src/modal/modal.js"></script>
+
 </html>
