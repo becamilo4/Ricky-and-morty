@@ -294,7 +294,10 @@ body{
     .header__category-ul.active{
         right: 0;
     }
-
+    
+    .modal__category-error{
+        color: red;
+    }
     .main{
         grid-template-areas:"main__item main__item main__item  main__item"
         "picture picture picture  picture"
