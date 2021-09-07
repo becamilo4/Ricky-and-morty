@@ -1,0 +1,6 @@
+.picture {
+  grid-area: picture;
+}
+.picture__img {
+  width: 300px;
+}
