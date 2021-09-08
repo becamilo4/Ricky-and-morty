@@ -1,11 +1,11 @@
-@media screen and (min-width: 320px) and (max-width: 767px){
+@media screen and (min-width: 768px) and (max-width: 1023px){
 
     .header{
         position: fixed;
         top: 0;
 
         &__title{
-            justify-content: flex-start;
+            padding-left: 30%;
         }
 
         &__menu{
@@ -68,8 +68,19 @@
         "search search search  search";
         margin-top: 90px;
         height: 150vh;
+
+        &__item--description{
+            margin-top: 50px;
+            font-size: 2rem;
+            text-align: justify;
+            line-height: 25px;
+            color: white;
+        }
     }
 
+    .picture__img{
+        width: 350px;
+    }
     .search__character{
         width: 100%;
 
