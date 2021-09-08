@@ -28,7 +28,8 @@
 }
 .search ::placeholder {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 .search__buton {
   margin-top: 10px;

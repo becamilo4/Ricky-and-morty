@@ -3,8 +3,10 @@
     align-items: center;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
+    @include grid-template-columns(1fr grid-repeat(3)); 
+    // repeat(4, 1fr);
+    @include grid-template-rows(1fr grid-repeat(2));
+    // repeat(3, auto);
     grid-template-areas: "main__item main__item picture  picture"
     "main__item main__item picture  picture "
     "search search search search";
