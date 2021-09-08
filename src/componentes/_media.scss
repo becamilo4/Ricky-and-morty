@@ -67,22 +67,27 @@
         "picture picture picture  picture"
         "search search search  search";
         margin-top: 90px;
-        height: 150vh;
+        min-height: 1000px;
     }
 
-    .search__character{
-        width: 100%;
+    .search{
 
+        &__character{
+            width: 100%;
+        }
+     
         &__buton{
             max-width: 150px;
             width: 40%;
         }
-    } 
+
+    }
+   
 
     .footer__container{
         flex-direction: column;
         justify-content: center;
-        height: 80px;
+        height: 100px;
 
         &__title{
             margin-bottom: 5px;

@@ -829,12 +829,12 @@ body {
   .main {
         grid-template-areas: "main__item main__item main__item  main__item" "picture picture picture  picture" "search search search  search";
     margin-top: 90px;
-    height: 150vh;
+    min-height: 1000px;
   }
   .search__character {
     width: 100%;
   }
-  .search__character__buton {
+  .search__buton {
     max-width: 150px;
     width: 40%;
   }
@@ -846,7 +846,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 80px;
+    height: 100px;
   }
   .footer__container__title {
     margin-bottom: 5px;
