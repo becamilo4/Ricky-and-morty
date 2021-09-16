@@ -978,13 +978,23 @@ body {
 
 .picture__character {
   width: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.picture_error {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .modal__category-error {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
-  color: red;
+  color: black;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {

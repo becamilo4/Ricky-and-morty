@@ -37,8 +37,9 @@
 }
 
 .modal__title {
-  width: 100%;
-  color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 @keyframes modal {
@@ -68,6 +69,13 @@
   cursor: pointer;
 }
 
+.picture_error {
+  width: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .modal__category {
   list-style: none;
   display: flex;
@@ -83,14 +91,17 @@
 }
 
 .picture__character {
-  width: 150px;
+  width: 100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .modal__category-error {
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
-  color: red;
+  color: black;
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {

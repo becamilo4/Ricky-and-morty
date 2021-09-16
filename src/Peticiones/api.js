@@ -6,59 +6,74 @@ const status = document.getElementById('status');
 const specie = document.getElementById('specie');
 const gender = document.getElementById('gender');
 const picture = document.getElementById('picture');
-const error = document.getElementById('error');
+const total1 = document.getElementById('total');
+const informacion_total = document.getElementById('informacion_total')
+// const picture_error = document.getElementById('picture_error')
+const picture3 = document.querySelector('.picture_error2')
 
 function renderimagen(image1) {
     picture.setAttribute('src',image1);
-
+    
 }
+
+// function renderimagen2(image2){
+//    picture_error.setAttribute('src',image2)
+// }
 
 const API = 'https://rickandmortyapi.com/api/character'
 
 
 button.addEventListener('click',function(){
+
     usuario = idField.value;
-    fetch (`${API}`)
-    .then (response => response.json())
-    .then (data => {
-       const error2 = data.info.count;
-    //    return fetch(error2);
-      
-    
-    fetch(`${API}/${usuario}`)
-    .then (response => response.json())
-    .then (data =>{   
-        if (usuario <= error2 && usuario > 0){
-        renderimagen(data.image);
-        id.innerHTML = `${"ID: "}${data.id}`;
-        names.innerHTML = `${"Name: "}${data.name}`;
-        status.innerHTML = `${"Status: "}${data.status}`;
-        specie.innerHTML = `${"Specie: "}${data.species}`;
-        gender.innerHTML = `${"gender: "}${data.gender}`;
-        error.innerHTML =`${''}`;
-        }else if (usuario >= error2){
-            renderimagen`<img${''}>`;
-            error.innerHTML =`${"todavía no hay muchos personajes. ¡Intenta de nuevo!. Cantidad de personajes de la serie: "}${error2}`;
-            id.innerHTML = `${"ID No encontrado"}`;
-            names.innerHTML = `${"NAME No encontrado"}`;
-            status.innerHTML = `${"STATUS No encontrado"}`;
-            specie.innerHTML = `${"SPECIE No encontrado"}`;
-            gender.innerHTML = `${"GENDER No encontrado"}`;
-        } else {
-            renderimagen`<img${''}>`;
-            error.innerHTML =`${"Dato nulo. Dato debe ser mayor a 0 "}`;
-            id.innerHTML = `${"ID No encontrado"}`;
-            names.innerHTML = `${"NAME No encontrado"}`;
-            status.innerHTML = `${"STATUS No encontrado"}`;
-            specie.innerHTML = `${"SPECIE No encontrado"}`;
-            gender.innerHTML = `${"GENDER No encontrado"}`;
+    const personajes = async () =>{
+        try{
+            const response1 = await fetch(`${API}`)
+            const cantidadpersonaje = await response1.json()
+            const response = await fetch(`${API}/${usuario}`);
+            const personaje = await response.json();
+            const total = cantidadpersonaje.info.count;
+            if (usuario <= total && usuario > 0) {
+            total1.innerHTML = `Total personajes ${cantidadpersonaje.info.count}`;
+            renderimagen(personaje.image);
+            informacion_total.innerHTML = "";
+            picture3.innerHTML =``;
+            id.textContent = `${"ID: "}${personaje.id}`;
+            names.innerHTML = `Nombre ${personaje.name}`;
+            status.innerHTML = `${"Status: "}${personaje.status}`;
+            specie.innerHTML = `${"Specie: "}${personaje.species}`;
+            gender.innerHTML = `${"gender: "}${personaje.gender}`;
+            }else if((usuario >= total)){
+                total1.innerHTML = `Toda via no hay tantos personajes. Ingrese otro valor`;
+                informacion_total.innerHTML = (`Total personajes ${total}`)
+                picture3.innerHTML=`<picture><img class="picture_error" src="https://rickandmortyapi.com/api/character/avatar/19.jpeg" alt="Error"> </picture>`;
+                renderimagen(``);
+                id.textContent = ``;
+                names.innerHTML = ``;
+                status.innerHTML = ``;
+                specie.innerHTML = ``;
+                gender.innerHTML = ``;
+
+            }
+            else  { 
+            total1.innerHTML = `Ingresa un valor mayor a 0`;
+            picture3.innerHTML=`<img class="picture_error" src="https://rickandmortyapi.com/api/character/avatar/19.jpeg" alt="Error">`;
+            renderimagen(``);
+            id.textContent = ``;
+            names.innerHTML = ``;
+            status.innerHTML = ``;
+            specie.innerHTML = ``;
+            gender.innerHTML = ``;
+            }
+        }catch{
+            names.innerHTML = "error";
         }
-    })
+    }
+    
+    personajes()
+
 
 }); 
+
+
     
-    // .catch (error => {
-    
-    //  id.innerText = 'Error';
-    // });
-})

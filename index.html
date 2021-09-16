@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="https://kit.fontawesome.com/b7e713bb32.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/estilos-index/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Ricky and morty</title>
 </head>
@@ -21,8 +21,8 @@
         
         <nav class="header__category">
             <ul class="header__category-ul">
-                <li class="header__category-li"><a class="header__category-a"href="#"><span class="header__category--span fas fa-home"></span>Inicio</a></li>
-                <li class="header__category-li"><a class="header__category-a"href="#"><span class="header__category--span fas fa-torii-gate"></span>Personajes</a></li>
+                <li class="header__category-li"><a class="header__category-a"href="./index.html"><span class="header__category--span fas fa-home"></span>Inicio</a></li>
+                <li class="header__category-li"><a class="header__category-a"href="./src/personaje/personaje.html"><span class="header__category--span fas fa-torii-gate"></span>Personajes</a></li>
                 <li class="header__category-li"><a class="header__category-a"href="#footer"><span class="header__category--span fas fa-address-book"></span>Sobre mi</a></li>
             </ul>
         </nav>
@@ -31,7 +31,7 @@
     <main class="main">
         <div class="main__item">
             <h2 class="main__item--title"> Javascript Asincronismo</h2>
-            <p class="main__item--description">En esta página podrá encontrar la información de los personajes de la serie Rick and Morty. El propósito de este proyecto fue utilizar lo aprendido en la clase Asincronismo en Javascript. El cual se hace petición a la página oficial de Rick and Morty.</p>
+            <p class="main__item--description">En esta página podrá encontrar la información de los personajes de la serie Rick and Morty. El propósito de este proyecto es utilizar asincronismo en Javascript. El cual hace petición a la página oficial de Rick and Morty.</p>
         </div>
         <div class="picture">
             <figure>  <img class="picture__img" src="https://pngimg.com/uploads/rick_morty/rick_morty_PNG24.png" alt="Rick and morty"></figure>
@@ -47,10 +47,12 @@
             <div id="flex" class="modal__bottom">
                 <div class="contenido-modal">
                     <div class="modal-header modal__bottom">
-                        <h2>Ricky and morty</h2>
+                        <h2 class="modal__title">Ricky and morty</h2>
                         <span id="clouse"class="clouse">&times;</span>
                         <lu class="modal__category">
-                            <li id="error" class="modal__category-error"></li>
+                            <nav class="picture_error2"></nav>
+                            <li id="total" class="modal__category-error"></li>
+                            <li id="informacion_total" class="modal__category-li"></li>
                             <figure> <img id="picture" class="picture__character"></figure>
                             <li id="id" class="modal__category-li"></li>
                             <li id="name" class="modal__category-li"></li>

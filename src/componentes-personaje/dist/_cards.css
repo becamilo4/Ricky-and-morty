@@ -1,0 +1,140 @@
+.loader {
+  position: absolute;
+  width: 200px;
+  top: 200px;
+  left: calc(50% - 100px);
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__links {
+  margin: 20px;
+  font-size: 25px;
+}
+
+.main__container {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-gap: 20px;
+}
+
+.main__container--cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  background-color: #606E97;
+  box-shadow: 1px 2px 7px 1px #000000;
+  margin-bottom: 30px;
+}
+
+.main__container-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.main__container-lu {
+  list-style: none;
+}
+
+.main__container-category {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.main__container-picture {
+  width: 200px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main__container {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 20px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    margin-top: 100px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+  }
+  .header__title {
+    justify-content: flex-start;
+  }
+  .header__menu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    padding: 30px;
+    outline: none;
+  }
+  .header__menu--a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.7rem;
+    float: right;
+  }
+  .header__menu--span {
+    color: white;
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    float: right;
+    overflow: hidden;
+    padding-left: 20px;
+  }
+  .header__category--span {
+    float: left;
+    position: relative;
+  }
+  .header__category-ul {
+    min-width: 150px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    display: flex;
+    right: -100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+    margin-top: 10px;
+  }
+  .header__category-ul.active {
+    right: 0;
+  }
+
+  .main__container {
+    width: calc(50% - 20px);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 20px;
+  }
+}
